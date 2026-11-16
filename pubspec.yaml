@@ -1,0 +1,88 @@
+name: anime_slayer_desktop
+description: "أنمي سلاير - نسخة سطح المكتب الأصلية بـ Flutter/Dart - مبنية من هندسة عكسية لـ AnimeSlayyer 1.5.10"
+publish_to: 'none'
+version: 1.5.10+47
+
+environment:
+  sdk: ^3.4.0
+  flutter: ">=3.22.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  # Core
+  dio: ^5.7.0
+  dio_cache_interceptor: ^3.5.1
+  pretty_dio_logger: ^1.4.0
+  retrofit: ^4.4.1
+  json_annotation: ^4.9.0
+  freezed_annotation: ^2.4.4
+  # State
+  flutter_riverpod: ^2.6.1
+  riverpod_annotation: ^2.6.1
+  # Navigation
+  go_router: ^14.6.0
+  # UI
+  cached_network_image: ^3.4.1
+  shimmer: ^3.0.0
+  flutter_staggered_grid_view: ^0.7.0
+  carousel_slider: ^5.0.0
+  photo_view: ^0.15.0
+  lottie: ^3.3.1
+  # Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.3.3
+  path_provider: ^2.1.4
+  # Video
+  media_kit: ^1.1.11
+  media_kit_video: ^1.0.9
+  media_kit_libs_video: ^1.0.9
+  chewie: ^1.11.1
+  video_player: ^2.9.2
+  # Firebase
+  firebase_core: ^3.8.0
+  firebase_messaging: ^15.1.4
+  firebase_analytics: ^11.3.6
+  firebase_crashlytics: ^4.3.3
+  # Auth
+  google_sign_in: ^6.3.0
+  # Utils
+  intl: ^0.20.2
+  timeago: ^3.7.0
+  url_launcher: ^6.3.0
+  window_manager: ^0.4.0
+  tray_manager: ^0.4.0
+  bitsdojo_window: ^0.1.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  build_runner: ^2.4.13
+  retrofit_generator: ^9.1.4
+  json_serializable: ^6.8.0
+  freezed: ^2.4.7
+  riverpod_generator: ^2.6.2
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+  fonts:
+    - family: Tajawal
+      fonts:
+        - asset: assets/fonts/Tajawal-Regular.ttf
+        - asset: assets/fonts/Tajawal-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Tajawal-Bold.ttf
+          weight: 700
+
+# Desktop platforms
+platforms:
+  windows:
+  linux:
+  macos:
