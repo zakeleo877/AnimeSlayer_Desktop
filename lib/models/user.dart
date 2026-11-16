@@ -7,7 +7,7 @@ class AppUser {
   final int id;
   final String username;
   final String email;
-  @JsonKey(name: 'profile_image")
+  @JsonKey(name: 'profile_image')
   final String? profileImage;
   final String? bio;
   final int? points;
