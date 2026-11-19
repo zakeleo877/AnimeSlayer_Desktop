@@ -1,5 +1,10 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
+
 part of 'user.dart';
+
+// **************************************************************************
+// JsonSerializableGenerator
+// **************************************************************************
 
 AppUser _$AppUserFromJson(Map<String, dynamic> json) => AppUser(
       id: (json['id'] as num).toInt(),
@@ -30,7 +35,8 @@ UserStatus _$UserStatusFromJson(Map<String, dynamic> json) => UserStatus(
       favorites: (json['favorites'] as num).toInt(),
     );
 
-Map<String, dynamic> _$UserStatusToJson(UserStatus instance) => <String, dynamic>{
+Map<String, dynamic> _$UserStatusToJson(UserStatus instance) =>
+    <String, dynamic>{
       'watching': instance.watching,
       'completed': instance.completed,
       'on_hold': instance.onHold,

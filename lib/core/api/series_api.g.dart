@@ -1,69 +1,370 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND - Stub for retrofit
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
 part of 'series_api.dart';
 
-// Stub implementation so project compiles 100% without build_runner
+// **************************************************************************
+// RetrofitGenerator
+// **************************************************************************
+
+// ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers,unused_element,unnecessary_string_interpolations
+
 class _SeriesApi implements SeriesApi {
-  _SeriesApi(this._dio, {this.baseUrl});
+  _SeriesApi(this._dio, {this.baseUrl, this.errorLogger}) {
+    baseUrl ??= 'https://anslayer.com/anime/public/';
+  }
+
   final Dio _dio;
-  final String? baseUrl;
+
+  String? baseUrl;
+
+  final ParseErrorLogger? errorLogger;
 
   @override
-  Future<Map<String, dynamic>> getAnimeDetails(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.getAnimeDetails, data: body);
-    return res.data as Map<String, dynamic>;
+  Future<Map<String, dynamic>> getAnimeDetails(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'anime/get-anime-details',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Map<String, dynamic>> getAnimeStatus(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.getAnimeStatus, data: body);
-    return res.data as Map<String, dynamic>;
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'anime/get-anime-status',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
-  Future<Map<String, dynamic>> getPublishedAnimes(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.getPublishedAnimes, data: body);
-    return res.data as Map<String, dynamic>;
+  Future<Map<String, dynamic>> getPublishedAnimes(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'animes/get-published-animes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
-  Future<Map<String, dynamic>> getAnimeCharacters(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.getAnimeCharacters, data: body);
-    return res.data as Map<String, dynamic>;
+  Future<Map<String, dynamic>> getAnimeCharacters(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'animes/get-anime-characters',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Map<String, dynamic>> getEpisodes(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.getEpisodes, data: body);
-    return res.data as Map<String, dynamic>;
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'episodes/get-episodes',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Map<String, dynamic>> getEpisodesNew(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.getEpisodesNew, data: body);
-    return res.data as Map<String, dynamic>;
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'episodes/get-episodes-new',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
-  Future<Map<String, dynamic>> saveAnimeRating(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.saveAnimeRating, data: body);
-    return res.data as Map<String, dynamic>;
+  Future<Map<String, dynamic>> saveAnimeRating(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'anime/save-anime-rating',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
-  Future<Map<String, dynamic>> saveToFavorites(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.saveToFavorites, data: body);
-    return res.data as Map<String, dynamic>;
+  Future<Map<String, dynamic>> saveToFavorites(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'anime/save-anime-to-favorites',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
   Future<Map<String, dynamic>> saveToWatching(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.saveToWatching, data: body);
-    return res.data as Map<String, dynamic>;
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'anime/save-anime-to-watching',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
   }
 
   @override
-  Future<Map<String, dynamic>> addContentRating(Map<String, dynamic> body) async {
-    final res = await _dio.post(ApiConstants.addContentRating, data: body);
-    return res.data as Map<String, dynamic>;
+  Future<Map<String, dynamic>> addContentRating(
+    Map<String, dynamic> body,
+  ) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(body);
+    final _options = _setStreamType<Map<String, dynamic>>(
+      Options(method: 'POST', headers: _headers, extra: _extra)
+          .compose(
+            _dio.options,
+            'animes/add-content-rating',
+            queryParameters: queryParameters,
+            data: _data,
+          )
+          .copyWith(baseUrl: _combineBaseUrls(_dio.options.baseUrl, baseUrl)),
+    );
+    final _result = await _dio.fetch<Map<String, dynamic>>(_options);
+    late Map<String, dynamic> _value;
+    try {
+      _value = _result.data!.map(
+        (k, dynamic v) =>
+            MapEntry(k, dynamic.fromJson(v as Map<String, dynamic>)),
+      );
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  RequestOptions _setStreamType<T>(RequestOptions requestOptions) {
+    if (T != dynamic &&
+        !(requestOptions.responseType == ResponseType.bytes ||
+            requestOptions.responseType == ResponseType.stream)) {
+      if (T == String) {
+        requestOptions.responseType = ResponseType.plain;
+      } else {
+        requestOptions.responseType = ResponseType.json;
+      }
+    }
+    return requestOptions;
+  }
+
+  String _combineBaseUrls(String dioBaseUrl, String? baseUrl) {
+    if (baseUrl == null || baseUrl.trim().isEmpty) {
+      return dioBaseUrl;
+    }
+
+    final url = Uri.parse(baseUrl);
+
+    if (url.isAbsolute) {
+      return url.toString();
+    }
+
+    return Uri.parse(dioBaseUrl).resolveUri(url).toString();
   }
 }
