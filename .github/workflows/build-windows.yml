@@ -13,7 +13,9 @@ jobs:
           channel: stable
           flutter-version: '3.50.0'
           cache: true
-      - name: Recreate Windows files
+      - name: Clean Windows
+        run: Remove-Item -Recurse -Force windows -ErrorAction SilentlyContinue
+      - name: Recreate Windows
         run: flutter create --platforms=windows .
       - name: Pub get
         run: flutter pub get
