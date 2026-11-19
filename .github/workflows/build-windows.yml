@@ -13,6 +13,8 @@ jobs:
           channel: stable
           flutter-version: '3.50.0'
           cache: true
+      - name: Recreate Windows files
+        run: flutter create --platforms=windows .
       - name: Pub get
         run: flutter pub get
       - name: Analyze
